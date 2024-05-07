@@ -5,8 +5,18 @@ public class RoomModel {
     private boolean availability;
     private int pgId;
     private int noOfBeds;
-
+    int type;
+    PGModel pg;
+    
     public RoomModel() {
+        
+    }
+
+    public RoomModel(int room_id, int type, boolean availability, PGModel pg) {
+        this.roomId = room_id;
+        this.type = type;
+        this.availability = availability;
+        this.pg = pg;
     }
 
     public int getRoomId() {
@@ -39,6 +49,14 @@ public class RoomModel {
 
     public void setNoOfBeds(int noOfBeds) {
         this.noOfBeds = noOfBeds;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public PGModel getPg() {
+        return pg;
     }
 
     @Override

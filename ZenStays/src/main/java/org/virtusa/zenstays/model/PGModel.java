@@ -1,5 +1,8 @@
 package org.virtusa.zenstays.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PGModel {
     private int pgId;
     private String name;
@@ -9,8 +12,18 @@ public class PGModel {
     private boolean status;
     private float rating;
     private String imgUrl;
+    List<String> facilities = new ArrayList<>();
 
     public PGModel() {
+        
+    }
+
+    public PGModel(int pgId, String name, String city, String address, float rating) {
+        this.pgId = pgId;
+        this.name = name;
+        this.city = city;
+        this.address = address;
+        this.rating = rating;
     }
 
     public int getPgId() {
@@ -75,6 +88,14 @@ public class PGModel {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public void setFacilities(List<String> facilities) {
+        this.facilities = facilities;
+    }
+
+    public List<String> getFacilities() {
+        return facilities;
     }
 
     @Override

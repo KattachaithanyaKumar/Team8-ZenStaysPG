@@ -28,8 +28,8 @@ public class OwnerPgDAO {
             st.setString(2, city);
             st.setString(3, address);
             st.setString(4, type);
-            st.setString(5, rating);
-            st.setString(6, status);
+            st.setString(5, status);
+            st.setString(6, rating);
             st.setString(7, imgUrl);
             statusUpdate = st.executeUpdate();
         }catch(SQLException e1) {
@@ -68,9 +68,9 @@ public class OwnerPgDAO {
                 pgData.setName(resultSet.getString(2));
                 pgData.setCity(resultSet.getString(3));
                 pgData.setAddress(resultSet.getString(4));
+                pgData.setRating(resultSet.getFloat(7));
                 pgData.setType(resultSet.getString(5));
-                pgData.setRating(resultSet.getFloat(6));
-                pgData.setStatus(resultSet.getBoolean(7));
+                pgData.setStatus(resultSet.getBoolean(6));
 
 //                System.out.println("Rating from database: " + resultSet.getFloat(7));
                 pgData.setImgUrl(resultSet.getString(8));
